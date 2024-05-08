@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
+
+final class DataApp {
+    
+    public static let shared = DataApp()
+    
+    private let size = UIScreen.main.bounds
+}
