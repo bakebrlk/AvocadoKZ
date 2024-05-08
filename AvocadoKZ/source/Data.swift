@@ -12,5 +12,7 @@ final class DataApp {
     
     public static let shared = DataApp()
     
-    private let size = UIScreen.main.bounds
+    public let size: CGRect = UIScreen.main.bounds
+    
+    public let appColor: Color = Color(red: 0.3255, green: 0.788, blue: 0.3529)
 }
