@@ -51,9 +51,10 @@
 		8B30B5762BEBF75500B20EE7 /* AvocadoKZ */ = {
 			isa = PBXGroup;
 			children = (
-				8B30B5772BEBF75500B20EE7 /* AvocadoKZApp.swift */,
-				8B30B5792BEBF75500B20EE7 /* ContentView.swift */,
-				8B30B57B2BEBF75700B20EE7 /* Assets.xcassets */,
+				8B9FEB9F2BEBFADA0081DCD5 /* viewModel */,
+				8B9FEB9E2BEBFAD40081DCD5 /* view */,
+				8B9FEB9D2BEBFACB0081DCD5 /* model */,
+				8B9FEB9C2BEBFA980081DCD5 /* main */,
 				8B30B57D2BEBF75700B20EE7 /* Preview Content */,
 			);
 			path = AvocadoKZ;
@@ -65,6 +66,37 @@
 				8B30B57E2BEBF75700B20EE7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8B9FEB9C2BEBFA980081DCD5 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				8B30B5772BEBF75500B20EE7 /* AvocadoKZApp.swift */,
+				8B30B57B2BEBF75700B20EE7 /* Assets.xcassets */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		8B9FEB9D2BEBFACB0081DCD5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8B9FEB9E2BEBFAD40081DCD5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8B30B5792BEBF75500B20EE7 /* ContentView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8B9FEB9F2BEBFADA0081DCD5 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
