@@ -9,10 +9,13 @@ import SwiftUI
 
 final class AText {
     
-    private static let shared: AText = AText()
+    public static let shared: AText = AText()
     
     public func justText(text: String) -> some View {
         Text(text)
-            .font(.custom("LexendDeca-Regular", size: 14))
+            .font(.custom("LexendDeca-Regular", size: 17))
+            .lineLimit(nil)
+            .multilineTextAlignment(.center)
+            .padding([.leading, .trailing])
     }
 }

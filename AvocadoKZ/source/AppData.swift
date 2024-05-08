@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-final class DataApp {
+final class AppData {
     
-    public static let shared = DataApp()
+    public static let shared = AppData()
     
     public let size: CGRect = UIScreen.main.bounds
     

@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import Combine
 
 final class HintViewModel: ObservableObject {
     
-    public var page: Int = 0
+    @Published public var page: Int = 0
+    
+    public func nextPage() {
+        page += 1
+    }
 }

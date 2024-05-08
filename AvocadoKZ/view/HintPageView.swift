@@ -9,11 +9,11 @@ import SwiftUI
 
 struct HintPageView: View {
         
-    private let vm: HintViewModel = HintViewModel()
+    @ObservedObject private var vm: HintViewModel = HintViewModel()
     
     var body: some View {
         ZStack{
-            DataApp.shared.appColor
+            AppData.shared.appColor
                 .ignoresSafeArea(.all)
             
             VStack{
@@ -28,12 +28,24 @@ struct HintPageView: View {
     
     private var information: some View {
         VStack{
+            Spacer()
             
             pages
             
             Spacer()
+            
+            AText.shared.justText(text: "Fast shipping")
+            
+            AText.shared.justText(text: "Get all of your desired sneakers in one place.")
+                .padding(.top)
+            
+            Spacer()
+            
+            nextPageBtn
+            
+            Spacer()
         }
-        .frame(maxWidth: .infinity, maxHeight: DataApp.shared.size.height/2.9)
+        .frame(maxWidth: .infinity, maxHeight: AppData.shared.size.height/2.9)
         .background(Color.white)
         .cornerRadius(20, corners: [.topLeft, .topRight])
         .padding([.leading, .trailing])
@@ -53,6 +65,21 @@ struct HintPageView: View {
             .frame(width: vm.page == id ? 18 : 8, height: 8)
             .foregroundColor(vm.page == id ? Color.black : Color(.systemGray3))
             .cornerRadius(4, corners: .allCorners)
+    }
+    
+    private var nextPageBtn: some View {
+        Button(action: {
+            vm.nextPage()
+        },
+               label: {
+            AText().justText(text: "Next")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .foregroundColor(.white)
+        })
+        .frame(maxWidth: .infinity, maxHeight: AppData.shared.size.height/15.5)
+        .background(AppData.shared.appColor)
+        .cornerRadius(20, corners: .allCorners)
+        .padding([.leading, .trailing, .bottom])
     }
 }
 
