@@ -11,6 +11,8 @@
 		8B30B57A2BEBF75500B20EE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30B5792BEBF75500B20EE7 /* ContentView.swift */; };
 		8B30B57C2BEBF75700B20EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B30B57B2BEBF75700B20EE7 /* Assets.xcassets */; };
 		8B30B57F2BEBF75700B20EE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B30B57E2BEBF75700B20EE7 /* Preview Assets.xcassets */; };
+		8B9FEBA12BEBFB8E0081DCD5 /* HintPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FEBA02BEBFB8E0081DCD5 /* HintPageView.swift */; };
+		8B9FEBA42BEBFBFC0081DCD5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FEBA32BEBFBFC0081DCD5 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		8B30B5792BEBF75500B20EE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B30B57B2BEBF75700B20EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B30B57E2BEBF75700B20EE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B9FEBA02BEBFB8E0081DCD5 /* HintPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPageView.swift; sourceTree = "<group>"; };
+		8B9FEBA32BEBFBFC0081DCD5 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		8B30B5762BEBF75500B20EE7 /* AvocadoKZ */ = {
 			isa = PBXGroup;
 			children = (
+				8B9FEBA22BEBFBEE0081DCD5 /* source */,
 				8B9FEB9F2BEBFADA0081DCD5 /* viewModel */,
 				8B9FEB9E2BEBFAD40081DCD5 /* view */,
 				8B9FEB9D2BEBFACB0081DCD5 /* model */,
@@ -88,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				8B30B5792BEBF75500B20EE7 /* ContentView.swift */,
+				8B9FEBA02BEBFB8E0081DCD5 /* HintPageView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -97,6 +103,14 @@
 			children = (
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		8B9FEBA22BEBFBEE0081DCD5 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				8B9FEBA32BEBFBFC0081DCD5 /* Data.swift */,
+			);
+			path = source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +185,8 @@
 			files = (
 				8B30B57A2BEBF75500B20EE7 /* ContentView.swift in Sources */,
 				8B30B5782BEBF75500B20EE7 /* AvocadoKZApp.swift in Sources */,
+				8B9FEBA12BEBFB8E0081DCD5 /* HintPageView.swift in Sources */,
+				8B9FEBA42BEBFBFC0081DCD5 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
