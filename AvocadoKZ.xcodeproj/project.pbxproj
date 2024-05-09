@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B2F0F5E2BED5A0E00867A08 /* Lexend-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F552BED5A0E00867A08 /* Lexend-ExtraLight.ttf */; };
+		8B2F0F5F2BED5A0E00867A08 /* Lexend-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F562BED5A0E00867A08 /* Lexend-Medium.ttf */; };
+		8B2F0F602BED5A0E00867A08 /* Lexend-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F572BED5A0E00867A08 /* Lexend-Regular.ttf */; };
+		8B2F0F612BED5A0E00867A08 /* Lexend-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F582BED5A0E00867A08 /* Lexend-Thin.ttf */; };
+		8B2F0F622BED5A0E00867A08 /* Lexend-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F592BED5A0E00867A08 /* Lexend-Bold.ttf */; };
+		8B2F0F632BED5A0E00867A08 /* Lexend-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F5A2BED5A0E00867A08 /* Lexend-ExtraBold.ttf */; };
+		8B2F0F642BED5A0E00867A08 /* Lexend-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F5B2BED5A0E00867A08 /* Lexend-SemiBold.ttf */; };
+		8B2F0F652BED5A0E00867A08 /* Lexend-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F5C2BED5A0E00867A08 /* Lexend-Light.ttf */; };
+		8B2F0F662BED5A0E00867A08 /* Lexend-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F5D2BED5A0E00867A08 /* Lexend-Black.ttf */; };
 		8B30B5782BEBF75500B20EE7 /* AvocadoKZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30B5772BEBF75500B20EE7 /* AvocadoKZApp.swift */; };
 		8B30B57C2BEBF75700B20EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B30B57B2BEBF75700B20EE7 /* Assets.xcassets */; };
 		8B30B57F2BEBF75700B20EE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B30B57E2BEBF75700B20EE7 /* Preview Assets.xcassets */; };
@@ -19,6 +28,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B2F0F542BED58C000867A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B2F0F552BED5A0E00867A08 /* Lexend-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-ExtraLight.ttf"; sourceTree = "<group>"; };
+		8B2F0F562BED5A0E00867A08 /* Lexend-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Medium.ttf"; sourceTree = "<group>"; };
+		8B2F0F572BED5A0E00867A08 /* Lexend-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Regular.ttf"; sourceTree = "<group>"; };
+		8B2F0F582BED5A0E00867A08 /* Lexend-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Thin.ttf"; sourceTree = "<group>"; };
+		8B2F0F592BED5A0E00867A08 /* Lexend-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Bold.ttf"; sourceTree = "<group>"; };
+		8B2F0F5A2BED5A0E00867A08 /* Lexend-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8B2F0F5B2BED5A0E00867A08 /* Lexend-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-SemiBold.ttf"; sourceTree = "<group>"; };
+		8B2F0F5C2BED5A0E00867A08 /* Lexend-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Light.ttf"; sourceTree = "<group>"; };
+		8B2F0F5D2BED5A0E00867A08 /* Lexend-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Black.ttf"; sourceTree = "<group>"; };
 		8B30B5742BEBF75500B20EE7 /* AvocadoKZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvocadoKZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B30B5772BEBF75500B20EE7 /* AvocadoKZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoKZApp.swift; sourceTree = "<group>"; };
 		8B30B57B2BEBF75700B20EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B2F0F512BED57C600867A08 /* Text Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8B2F0F5D2BED5A0E00867A08 /* Lexend-Black.ttf */,
+				8B2F0F592BED5A0E00867A08 /* Lexend-Bold.ttf */,
+				8B2F0F5A2BED5A0E00867A08 /* Lexend-ExtraBold.ttf */,
+				8B2F0F552BED5A0E00867A08 /* Lexend-ExtraLight.ttf */,
+				8B2F0F5C2BED5A0E00867A08 /* Lexend-Light.ttf */,
+				8B2F0F562BED5A0E00867A08 /* Lexend-Medium.ttf */,
+				8B2F0F572BED5A0E00867A08 /* Lexend-Regular.ttf */,
+				8B2F0F5B2BED5A0E00867A08 /* Lexend-SemiBold.ttf */,
+				8B2F0F582BED5A0E00867A08 /* Lexend-Thin.ttf */,
+			);
+			path = "Text Fonts";
+			sourceTree = "<group>";
+		};
 		8B30B56B2BEBF75500B20EE7 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				8B30B5772BEBF75500B20EE7 /* AvocadoKZApp.swift */,
+				8B2F0F542BED58C000867A08 /* Info.plist */,
 				8B30B57B2BEBF75700B20EE7 /* Assets.xcassets */,
 			);
 			path = main;
@@ -117,6 +153,7 @@
 		8B9FEBA22BEBFBEE0081DCD5 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				8B2F0F512BED57C600867A08 /* Text Fonts */,
 				8B9FEBA32BEBFBFC0081DCD5 /* AppData.swift */,
 			);
 			path = source;
@@ -196,8 +233,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2F0F5E2BED5A0E00867A08 /* Lexend-ExtraLight.ttf in Resources */,
+				8B2F0F612BED5A0E00867A08 /* Lexend-Thin.ttf in Resources */,
+				8B2F0F632BED5A0E00867A08 /* Lexend-ExtraBold.ttf in Resources */,
 				8B30B57F2BEBF75700B20EE7 /* Preview Assets.xcassets in Resources */,
+				8B2F0F602BED5A0E00867A08 /* Lexend-Regular.ttf in Resources */,
+				8B2F0F662BED5A0E00867A08 /* Lexend-Black.ttf in Resources */,
 				8B30B57C2BEBF75700B20EE7 /* Assets.xcassets in Resources */,
+				8B2F0F622BED5A0E00867A08 /* Lexend-Bold.ttf in Resources */,
+				8B2F0F642BED5A0E00867A08 /* Lexend-SemiBold.ttf in Resources */,
+				8B2F0F5F2BED5A0E00867A08 /* Lexend-Medium.ttf in Resources */,
+				8B2F0F652BED5A0E00867A08 /* Lexend-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +397,8 @@
 				DEVELOPMENT_TEAM = U5PQY3V94J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AvocadoKZ/main/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -380,6 +428,8 @@
 				DEVELOPMENT_TEAM = U5PQY3V94J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AvocadoKZ/main/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

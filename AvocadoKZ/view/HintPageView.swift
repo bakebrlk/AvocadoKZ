@@ -18,7 +18,7 @@ struct HintPageView: View {
             
             VStack{
                 Spacer()
-               
+                
                 information
             }
             .ignoresSafeArea()
@@ -69,7 +69,9 @@ struct HintPageView: View {
     
     private var nextPageBtn: some View {
         Button(action: {
-            vm.nextPage()
+            withAnimation{
+                vm.nextPage()
+            }
         },
                label: {
             AText().justText(text: "Next")
