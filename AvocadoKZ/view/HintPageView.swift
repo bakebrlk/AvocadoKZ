@@ -17,6 +17,11 @@ struct HintPageView: View {
                 .ignoresSafeArea(.all)
             
             VStack{
+                
+                Spacer()
+                
+                image
+                
                 Spacer()
                 
                 information
@@ -48,6 +53,30 @@ struct HintPageView: View {
         .background(Color.white)
         .cornerRadius(20, corners: [.topLeft, .topRight])
         .padding([.leading, .trailing])
+    }
+    
+    private var image: some View {
+        AsyncImage(url: vm.imageURL) { phace in
+            
+            switch phace {
+                case .empty:
+                    ProgressView()
+                       
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        
+                case .failure:
+                    Image(systemName: "questionmark")
+                        .font(.headline)
+                default:
+                    Image(systemName: "questionmark")
+                        .font(.headline)
+            }
+        }
+       
+           
     }
     
     // Title
@@ -89,7 +118,7 @@ struct HintPageView: View {
             }
         },
                label: {
-            AText().text(text: "Next", size: 22, font: .medium)
+            AText().text(text: "Следующий", size: 22, font: .medium)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .foregroundColor(.white)
         })
