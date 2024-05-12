@@ -15,4 +15,12 @@ final class HintViewModel: ObservableObject {
     public func nextPage() {
         page += 1
     }
+    
+    public var title: String {
+        AppData.shared.hints[page].title
+    }
+    
+    public var description: String {
+        AppData.shared.hints[page].description
+    }
 }

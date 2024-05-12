@@ -13,7 +13,15 @@ final class AText {
     
     public func justText(text: String) -> some View {
         Text(text)
-            .font(.custom("Lexend-Regular", size: 17))
+            .font(.custom(AFont.regular.toString(), size: 17))
+            .lineLimit(nil)
+            .multilineTextAlignment(.center)
+            .padding([.leading, .trailing])
+    }
+    
+    public func text(text: String, size: CGFloat, font: AFont) -> some View {
+        Text(text)
+            .font(.custom(font.toString(), size: size))
             .lineLimit(nil)
             .multilineTextAlignment(.center)
             .padding([.leading, .trailing])

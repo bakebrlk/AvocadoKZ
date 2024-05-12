@@ -25,7 +25,7 @@ struct HintPageView: View {
         }
     }
     
-    
+//MARK: information
     private var information: some View {
         VStack{
             Spacer()
@@ -34,10 +34,9 @@ struct HintPageView: View {
             
             Spacer()
             
-            AText.shared.justText(text: "Fast shipping")
-            
-            AText.shared.justText(text: "Get all of your desired sneakers in one place.")
-                .padding(.top)
+            title
+           
+            description
             
             Spacer()
             
@@ -51,6 +50,19 @@ struct HintPageView: View {
         .padding([.leading, .trailing])
     }
     
+    // Title
+    private var title: some View {
+        AText.shared.text(text: vm.title, size: 26, font: .medium)
+            .foregroundStyle(LinearGradient(colors: [.green, .mint, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
+    }
+    
+    // Description
+    private var description: some View {
+        AText.shared.justText(text: vm.description)
+            .padding(.top, 1)
+    }
+    
+    // Pages
     private var pages: some View {
         HStack{
             ForEach(0..<3) { index in
@@ -60,13 +72,16 @@ struct HintPageView: View {
         .padding(.top)
     }
     
+    // circle for pages
     private func circlePage(id: Int) -> some View{
         Rectangle()
             .frame(width: vm.page == id ? 18 : 8, height: 8)
-            .foregroundColor(vm.page == id ? Color.black : Color(.systemGray3))
+            .foregroundStyle(vm.page == id ? Color.mint: Color(.systemGray3))
+           
             .cornerRadius(4, corners: .allCorners)
     }
     
+    // Button
     private var nextPageBtn: some View {
         Button(action: {
             withAnimation{
@@ -74,7 +89,7 @@ struct HintPageView: View {
             }
         },
                label: {
-            AText().justText(text: "Next")
+            AText().text(text: "Next", size: 22, font: .medium)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .foregroundColor(.white)
         })

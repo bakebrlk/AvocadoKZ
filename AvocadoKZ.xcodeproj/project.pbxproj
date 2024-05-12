@@ -17,6 +17,7 @@
 		8B2F0F652BED5A0E00867A08 /* Lexend-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F5C2BED5A0E00867A08 /* Lexend-Light.ttf */; };
 		8B2F0F662BED5A0E00867A08 /* Lexend-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F0F5D2BED5A0E00867A08 /* Lexend-Black.ttf */; };
 		8B2F0F682BED5B9400867A08 /* AFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F0F672BED5B9400867A08 /* AFont.swift */; };
+		8B2F0F6A2BED617500867A08 /* HintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F0F692BED617500867A08 /* HintModel.swift */; };
 		8B30B5782BEBF75500B20EE7 /* AvocadoKZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30B5772BEBF75500B20EE7 /* AvocadoKZApp.swift */; };
 		8B30B57C2BEBF75700B20EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B30B57B2BEBF75700B20EE7 /* Assets.xcassets */; };
 		8B30B57F2BEBF75700B20EE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B30B57E2BEBF75700B20EE7 /* Preview Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		8B2F0F5C2BED5A0E00867A08 /* Lexend-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Light.ttf"; sourceTree = "<group>"; };
 		8B2F0F5D2BED5A0E00867A08 /* Lexend-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Black.ttf"; sourceTree = "<group>"; };
 		8B2F0F672BED5B9400867A08 /* AFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFont.swift; sourceTree = "<group>"; };
+		8B2F0F692BED617500867A08 /* HintModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintModel.swift; sourceTree = "<group>"; };
 		8B30B5742BEBF75500B20EE7 /* AvocadoKZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvocadoKZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B30B5772BEBF75500B20EE7 /* AvocadoKZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoKZApp.swift; sourceTree = "<group>"; };
 		8B30B57B2BEBF75700B20EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				8B9FEBAC2BEC05DC0081DCD5 /* Custom */,
 				8B9FEBA82BEC00360081DCD5 /* RoundedCorner.swift */,
+				8B2F0F692BED617500867A08 /* HintModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2F0F6A2BED617500867A08 /* HintModel.swift in Sources */,
 				8B2F0F682BED5B9400867A08 /* AFont.swift in Sources */,
 				8B9FEBA72BEC00080081DCD5 /* View.swift in Sources */,
 				8B30B5782BEBF75500B20EE7 /* AvocadoKZApp.swift in Sources */,
