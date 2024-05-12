@@ -16,6 +16,7 @@ final class AppData {
     
     public let appColor: Color = Color(red: 0.3255, green: 0.788, blue: 0.3529)
     
+//MARK: Hints
     public let hints: [HintModel] = [
         HintModel(
                     title: "Добро пожаловать в AvocadoKZ",
@@ -32,4 +33,33 @@ final class AppData {
                     description: "Наш магазин предоставит вам широкий ассортимент продуктов и услуг.",
                     imgURL: URL(string: "https://firebasestorage.googleapis.com/v0/b/avocado-kz.appspot.com/o/happyImage.png?alt=media&token=aef38f8e-56c9-4e49-9652-9e15fbc9fe86")!)
     ]
+//    
+////MARK: Events
+//    public let events: [EventModel] = [
+//        
+//        EventModel(
+//                    imageURL: URL(string: "")!),
+//        
+//        EventModel(
+//                    imageURL: URL(string: "")!),
+//                   
+//        EventModel(
+//                    imageURL: URL(string: "")!),
+//        
+//        EventModel(
+//                    imageURL: URL(string: "")!),
+//                    
+//        EventModel(
+//                    imageURL: URL(string: "")!),
+//        
+//        EventModel(
+//                    imageURL: URL(string: "")!),
+//                   
+//        EventModel(
+//                    imageURL: URL(string: "")!),
+//        
+//        EventModel(
+//                    imageURL: URL(string: "")!)
+//                   
+//    ]
 }
