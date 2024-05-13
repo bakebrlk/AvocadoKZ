@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 struct EventScrollModel: View {
    
     let height: CGFloat = /*AppData.shared.size.height/4*/ 350
@@ -41,22 +42,6 @@ struct EventScrollModel: View {
         .frame(height: height)
     }
     
-    private func offset(_ proxy: GeometryProxy) -> CGFloat {
-        let progress = progress(proxy)
-        
-        return progress > 0 ? progress * -30 : progress * 30
-    }
-    
-    private func scale(_ proxy: GeometryProxy) -> CGFloat {
-        let progress = min(max(progress(proxy), -1), 1)
-        
-        return progress > 0 ? 1 + progress : 1 - progress
-    }
-    
-    private func progress(_ proxy: GeometryProxy) -> CGFloat {
-        let viewWidth = proxy.size.width
-        let minX = (proxy.bounds(of: .scrollView)?.minX ?? 0)
-        
-        return minX / viewWidth
-    }
+
 }
+
