@@ -180,7 +180,6 @@
 				8B2F0F692BED617500867A08 /* HintModel.swift */,
 				8BA651972BF1153100C23172 /* EventModel.swift */,
 				8B59EE602BF221D7004607E4 /* ProductModel.swift */,
-				8B514D662BFA97EE00CBDF78 /* ProductView.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -191,6 +190,7 @@
 				8B9FEBA02BEBFB8E0081DCD5 /* HintPageView.swift */,
 				8B59EE622BF22307004607E4 /* MarketView.swift */,
 				8B3791BB2BFA557F00536706 /* TestContentView.swift */,
+				8B514D662BFA97EE00CBDF78 /* ProductView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";

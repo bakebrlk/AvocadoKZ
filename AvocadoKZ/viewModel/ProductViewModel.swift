@@ -10,6 +10,35 @@ import SwiftUI
 final class ProductViewModel: ObservableObject{
     
     @Published public var isLike: Bool = false
-    @Published public var addBasket: Bool = false
+    @Published public var haveBasket: Bool = false
     @Published public var count: Int = 0
+    
+    public func plus() {
+        withAnimation{
+            count += 1
+        }
+    }
+    
+    public func minus(){
+        withAnimation{
+            if count == 1 {
+                haveBasket.toggle()
+            }else {
+                count -= 1
+            }
+        }
+    }
+    
+    public func addBasket() {
+        withAnimation{
+            haveBasket.toggle()
+            count = 1
+        }
+    }
+    
+    public func like() {
+        withAnimation{
+            isLike.toggle()
+        }
+    }
 }
