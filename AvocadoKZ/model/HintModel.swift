@@ -10,5 +10,5 @@ import SwiftUI
 struct HintModel: Codable {
     let title: String
     let description: String
-    let imgURL: URL
+    let imgURL: String
 }

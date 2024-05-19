@@ -24,7 +24,7 @@ final class HintViewModel: ObservableObject {
         AppData.shared.hints[page].description
     }
     
-    public var imageURL: URL {
+    public var imageURL: String {
         AppData.shared.hints[page].imgURL
     }
 }
