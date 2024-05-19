@@ -71,13 +71,18 @@ struct HintPageView: View {
     
     // Title
     private var title: some View {
-        AText.shared.text(text: vm.title, size: 26, font: .medium)
-//            .foregroundStyle(LinearGradient(colors: [.green, .mint, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
+        Group {
+            AText.shared.text(text: vm.title, size: 24, font: .medium)
+                .foregroundColor(Color(.black))
+            AText.shared.text(text: AppData.shared.appTitle, size: 26, font: .medium)
+                .foregroundColor(Color(.systemGreen))
+        }
     }
     
     // Description
     private var description: some View {
         AText.shared.justText(text: vm.description)
+            .foregroundColor(Color(.systemGray))
             .padding(.top, 1)
     }
     
@@ -95,7 +100,7 @@ struct HintPageView: View {
     private func circlePage(id: Int) -> some View{
         Rectangle()
             .frame(width: vm.page == id ? 18 : 8, height: 8)
-//            .foregroundStyle(vm.page == id ? Color.mint: Color(.systemGray3))
+            .foregroundColor(vm.page == id ? Color.green: Color(.systemGray3))
            
             .cornerRadius(4, corners: .allCorners)
     }
