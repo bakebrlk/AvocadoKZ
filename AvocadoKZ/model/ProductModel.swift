@@ -8,41 +8,21 @@
 import SwiftUI
 
 struct ProductModel: Codable {
-    let imgURL: URL
+    let imgURL: String
     let title: String
     let whole: String
     let price: Int
 }
 
-struct ProductView: View {
-    
-    var body: some View{
-        ScrollView{
-            
-            HStack{
-                product(ProductModel(
-                    imgURL: URL(string: "https://arbuz.kz/image/s3/arbuz-kz-products/44594e47-6ae3-4f2d-9949-188cca096baf-38_png.png?w=360&h=360&_c=1715751489")!,
-                    title: "Грудка куриная Arbuz Select су-вид с чесноком и травами", whole: "7 580₸/кг", price: 1599))
-             
-                product(ProductModel(imgURL: URL(string: "https://arbuz.kz/image/s3/arbuz-kz-products/44594e47-6ae3-4f2d-9949-188cca096baf-38_png.png?w=360&h=360&_c=1715751489")!,
-                                     title:  "Грудка куриная Arbuz Select су-вид с чесноком и травами", whole: "7 580₸/кг", price: 1599))
-               
-            }
-            
-            
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.secondarySystemBackground))
-    }
+final class ProductView {
     
     func product(_ product: ProductModel) -> some View {
   
         LazyVStack{
             
-//            image(URL: product.imgURL)
-//                    .frame(minWidth: AppData.shared.size.width/2.4)
-//                    .cornerRadius(8, corners: [.topLeft, .topRight])
-                
+            AsyncImage(url: product.imgURL, placeholder: {AText.shared.justText(text: "Loading...")})
+                .cornerRadius(8, corners: [.topLeft, .topRight])
+            
             LazyVStack{
                 AText.shared.text(text: product.title, size: 14, font: .regular, lineLimit: 2)
                 AText.shared.text(text: product.whole, size: 14, font: .light)
