@@ -8,5 +8,8 @@
 import SwiftUI
 
 final class ProductViewModel: ObservableObject{
+    
     @Published public var isLike: Bool = false
+    @Published public var addBasket: Bool = false
+    @Published public var count: Int = 0
 }

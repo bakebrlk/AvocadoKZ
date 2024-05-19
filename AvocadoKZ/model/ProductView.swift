@@ -40,7 +40,9 @@ struct ProductView: View {
                     .foregroundColor(.red)
                     .padding()
                     .onTapGesture {
-                        vm.isLike.toggle()
+                        withAnimation {
+                            vm.isLike.toggle()
+                        }
                     }
             
             }
@@ -57,21 +59,7 @@ struct ProductView: View {
                     .padding(.bottom, 0)
                 }
                 
-                Button(action: {}, label: {
-                    AText.shared.justText(text: "Добавить +")
-                        .frame(maxWidth: .infinity,minHeight: 50)
-                        .background(
-                            CurveRectangle()
-                                .frame(maxWidth: .infinity)
-                                .foregroundColor(Color(.secondarySystemBackground))
-                                .padding(.top, 5)
-                        )
-                        .foregroundColor(.green)
-                        .padding([.leading, .trailing])
-                        
-                })
-                .frame(maxWidth: .infinity)
-                .padding(.bottom,25)
+                addBasket
             }
             .background(
                 BottomCurveRectangle()
@@ -82,4 +70,56 @@ struct ProductView: View {
             
     }
 
+    private var addBasket: some View {
+        Group {
+            
+            if vm.addBasket {
+                
+                HStack{
+                    image(systemName: "trash", size: 18)
+                        .foregroundColor(.white)
+                        .onTapGesture {
+                            withAnimation {
+                                vm.count = 0
+                                vm.addBasket.toggle()
+                            }
+                        }
+                    
+                    AText.shared.justText(text: "\(vm.count)шт")
+                        .foregroundColor(.white)
+                        .padding([.top, .bottom])
+                    
+                    image(systemName: "plus", size: 15)
+                        .foregroundColor(.white)
+                        .onTapGesture {
+                            vm.count += 1
+                        }
+                }
+                .padding([.leading, .trailing])
+                
+            }else {
+                Button(action: {
+                    withAnimation {
+                        vm.addBasket.toggle()
+                        vm.count = 1
+                    }
+                }, label: {
+                    AText.shared.justText(text: "Добавить +")
+                        .frame(maxWidth: .infinity,minHeight: 50)
+                        .foregroundColor(.green)
+                    
+                })
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .background(
+            CurveRectangle()
+                .frame(maxWidth: .infinity)
+                .foregroundColor(vm.addBasket ? Color.green : Color(.secondarySystemBackground))
+                .padding(.top, 5)
+        )
+        .padding([.leading, .trailing])
+        .padding(.bottom,25)
+        
+    }
 }
