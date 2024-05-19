@@ -19,7 +19,7 @@ struct AsyncImage<Placeholder: View>: View {
             
         self.image = image
         self.placeholder = placeholder()
-        _loader = ObservedObject(wrappedValue: ImageLoader(url: url, cache: Environment(\.imageCache).wrappedValue))
+        _loader = ObservedObject(wrappedValue: ImageLoader(url: url))
     }
 
     var body: some View {
