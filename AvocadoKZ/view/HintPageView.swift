@@ -56,13 +56,17 @@ struct HintPageView: View {
     }
     
     private var image: some View {
-        AsyncImage(
-            url: vm.imageURL,
-            placeholder: {
-                Text("Loading...")
+        ForEach(0..<AppData.shared.hints.count, id: \.self) { i in
+            if i == vm.page {
+                AsyncImage(
+                    url: AppData.shared.hints[i].imgURL,
+                    placeholder: {
+                        Text("Loading...")
+                    }
+                )
             }
-        )
-        .frame(maxWidth: 200, maxHeight: AppData.shared.size.height/3)
+        }
+        .frame(maxWidth: .infinity, maxHeight: AppData.shared.size.height/2)
     }
     
     // Title

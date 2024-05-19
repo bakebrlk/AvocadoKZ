@@ -11,7 +11,7 @@ import Combine
 final class ImageLoader: ObservableObject {
     
     @Published var image: UIImage?
-    private let url: URL
+    @Published private var url: URL
     private var cancellable: AnyCancellable?
     private var cache: ImageCache?
     private(set) var isLoading = false
