@@ -1,19 +1,14 @@
-//
-//  CurveRectangle.swift
-//  AvocadoKZ
-//
-//  Created by bakebrlk on 13.05.2024.
-//
 
 import SwiftUI
 
-struct CurveRectangle: Shape {
+struct BottomCurveRectangle: Shape {
     
     func path(in r: CGRect) -> Path {
         
         let radius: CGFloat = 8
-        let percentOfHight = 0.75
-
+        
+        let percentOfHight = 0.93
+        
         let tl = CGPoint(x: r.minX + radius, y: r.minY)
         let tlc = CGPoint(x: r.minX + radius, y: r.minY + radius)
         
@@ -44,7 +39,7 @@ struct CurveRectangle: Shape {
 
         path.addRelativeArc(center: trc, radius: radius, startAngle: Angle(degrees: 360), delta: Angle(degrees: -90))
         
-        path.addQuadCurve(to: tl, control: CGPoint(x: r.midX, y: r.midY/2) )
+        path.addLine(to: tl)
         
         return path
     }

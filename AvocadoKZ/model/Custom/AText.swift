@@ -25,5 +25,13 @@ final class AText {
             .lineLimit(nil)
             .multilineTextAlignment(.center)
             .padding([.leading, .trailing])
+    } 
+    
+    public func text(text: String, size: CGFloat, font: AFont, lineLimit: Int) -> some View {
+        Text(text)
+            .font(.custom(font.toString(), size: size))
+            .lineLimit(lineLimit)
+            .multilineTextAlignment(.center)
+            .padding([.leading, .trailing])
     }
 }

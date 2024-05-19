@@ -11,15 +11,10 @@ struct MarketView: View {
     var body: some View {
         
         VStack{
-            CurveRectangle()
-               
-//                .stroke(lineWidth: 2)
-                .frame(maxWidth: 320, maxHeight: 100)
-                .foregroundColor(.mint)
- 
-            //                .cornerRadius(28, corners: .bottomLeft)
-                .padding()
+            
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemBackground))
     }
 }
 
