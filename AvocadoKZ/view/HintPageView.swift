@@ -56,33 +56,19 @@ struct HintPageView: View {
     }
     
     private var image: some View {
-        AsyncImage(url: vm.imageURL) { phace in
-            
-            switch phace {
-                case .empty:
-                    ProgressView()
-                       
-                case .success(let image):
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        
-                case .failure:
-                    Image(systemName: "questionmark")
-                        .font(.headline)
-                default:
-                    Image(systemName: "questionmark")
-                        .font(.headline)
+        AsyncImage(
+            url: vm.imageURL,
+            placeholder: {
+                Text("Loading...")
             }
-        }
-       
-           
+        )
+        .frame(maxWidth: 200, maxHeight: AppData.shared.size.height/3)
     }
     
     // Title
     private var title: some View {
         AText.shared.text(text: vm.title, size: 26, font: .medium)
-            .foregroundStyle(LinearGradient(colors: [.green, .mint, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
+//            .foregroundStyle(LinearGradient(colors: [.green, .mint, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
     }
     
     // Description
@@ -105,7 +91,7 @@ struct HintPageView: View {
     private func circlePage(id: Int) -> some View{
         Rectangle()
             .frame(width: vm.page == id ? 18 : 8, height: 8)
-            .foregroundStyle(vm.page == id ? Color.mint: Color(.systemGray3))
+//            .foregroundStyle(vm.page == id ? Color.mint: Color(.systemGray3))
            
             .cornerRadius(4, corners: .allCorners)
     }
