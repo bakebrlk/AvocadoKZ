@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct AsyncImage<Placeholder: View>: View {
-    @ObservedObject private var loader: ImageLoader
+    @StateObject private var loader: ImageLoader
     private let placeholder: Placeholder
     private let image: (UIImage) -> Image
 
@@ -19,7 +19,7 @@ struct AsyncImage<Placeholder: View>: View {
             
         self.image = image
         self.placeholder = placeholder()
-        _loader = ObservedObject(wrappedValue: ImageLoader(url: url))
+        _loader = StateObject(wrappedValue: ImageLoader(url: url))
     }
 
     var body: some View {

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class AppData {
+final class AppData: ObservableObject {
     
     public static let shared = AppData()
     
