@@ -59,7 +59,3 @@ final class ProductView {
     }
 
 }
-
-#Preview {
-    ProductView()
-}
