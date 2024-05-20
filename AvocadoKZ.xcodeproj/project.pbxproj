@@ -132,7 +132,6 @@
 		8B30B5762BEBF75500B20EE7 /* AvocadoKZ */ = {
 			isa = PBXGroup;
 			children = (
-				8B755BD02BFBC81A00B2ACCA /* navigation */,
 				8BA651942BF0FCC900C23172 /* networking */,
 				8B9FEBA52BEBFFF20081DCD5 /* extensions */,
 				8B9FEBA22BEBFBEE0081DCD5 /* source */,
@@ -163,13 +162,6 @@
 				8B3791C22BFA577800536706 /* ImageCacheKey.swift */,
 			);
 			path = Image;
-			sourceTree = "<group>";
-		};
-		8B755BD02BFBC81A00B2ACCA /* navigation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = navigation;
 			sourceTree = "<group>";
 		};
 		8B9FEB9C2BEBFA980081DCD5 /* main */ = {
