@@ -8,12 +8,14 @@
 import SwiftUI
 import UIKit
 
+
 struct ProductView: View {
     
     private let product: ProductModel
     
     @ObservedObject private var vm = ProductViewModel()
-    
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
+
     init(_ product: ProductModel){
         self.product = product
     }
@@ -22,10 +24,10 @@ struct ProductView: View {
         productView()
             .onTapGesture {
                 vm.openDetails.toggle()
+                self.viewControllerHolder?.present(style: .pageSheet){
+                    ProductDetailView(product: product)
+                }
             }
-            .sheet(isPresented: $vm.openDetails, content: {
-                ProductDetailView(product: product)
-            })
     }
     
     private func productView() -> some View {
