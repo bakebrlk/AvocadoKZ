@@ -35,6 +35,13 @@
 		8B5EF4D72BF64B65007908AA /* BottomCurveRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5EF4D62BF64B65007908AA /* BottomCurveRectangle.swift */; };
 		8B5EF4D92BF660C1007908AA /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5EF4D82BF660C1007908AA /* AsyncImage.swift */; };
 		8B755BCE2BFB7B5600B2ACCA /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755BCD2BFB7B5600B2ACCA /* ProductDetailView.swift */; };
+		8B755C0D2BFBF54500B2ACCA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B755BEA2BFBDEE400B2ACCA /* SnapKit */; };
+		8B755C0E2BFBF54500B2ACCA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8B755BEC2BFBDEE400B2ACCA /* SnapKit-Dynamic */; };
+		8B755C102BFBF60F00B2ACCA /* UIViewController_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C0F2BFBF60F00B2ACCA /* UIViewController_.swift */; };
+		8B755C122BFBF64A00B2ACCA /* UIKit_To_SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C112BFBF64A00B2ACCA /* UIKit_To_SwiftUI.swift */; };
+		8B755C142BFBF6B600B2ACCA /* ViewControllerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C132BFBF6B600B2ACCA /* ViewControllerHolder.swift */; };
+		8B755C162BFBF6E200B2ACCA /* ViewControllerKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C152BFBF6E200B2ACCA /* ViewControllerKey.swift */; };
+		8B755C182BFBF71700B2ACCA /* UIVIewAA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C172BFBF71700B2ACCA /* UIVIewAA.swift */; };
 		8B8E728E2BF291CB00669451 /* CurveRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8E728D2BF291CB00669451 /* CurveRectangle.swift */; };
 		8B9FEBA12BEBFB8E0081DCD5 /* HintPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FEBA02BEBFB8E0081DCD5 /* HintPageView.swift */; };
 		8B9FEBA42BEBFBFC0081DCD5 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FEBA32BEBFBFC0081DCD5 /* AppData.swift */; };
@@ -76,6 +83,11 @@
 		8B5EF4D62BF64B65007908AA /* BottomCurveRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCurveRectangle.swift; sourceTree = "<group>"; };
 		8B5EF4D82BF660C1007908AA /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		8B755BCD2BFB7B5600B2ACCA /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		8B755C0F2BFBF60F00B2ACCA /* UIViewController_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_.swift; sourceTree = "<group>"; };
+		8B755C112BFBF64A00B2ACCA /* UIKit_To_SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit_To_SwiftUI.swift; sourceTree = "<group>"; };
+		8B755C132BFBF6B600B2ACCA /* ViewControllerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHolder.swift; sourceTree = "<group>"; };
+		8B755C152BFBF6E200B2ACCA /* ViewControllerKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerKey.swift; sourceTree = "<group>"; };
+		8B755C172BFBF71700B2ACCA /* UIVIewAA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewAA.swift; sourceTree = "<group>"; };
 		8B8E728D2BF291CB00669451 /* CurveRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveRectangle.swift; sourceTree = "<group>"; };
 		8B9FEBA02BEBFB8E0081DCD5 /* HintPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPageView.swift; sourceTree = "<group>"; };
 		8B9FEBA32BEBFBFC0081DCD5 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
@@ -91,8 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B755BEB2BFBDEE400B2ACCA /* SnapKit in Frameworks */,
-				8B755BED2BFBDEE400B2ACCA /* SnapKit-Dynamic in Frameworks */,
+				8B755C0E2BFBF54500B2ACCA /* SnapKit-Dynamic in Frameworks */,
+				8B755C0D2BFBF54500B2ACCA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +182,9 @@
 		8B755BF02BFBE96F00B2ACCA /* navigation */ = {
 			isa = PBXGroup;
 			children = (
+				8B755C112BFBF64A00B2ACCA /* UIKit_To_SwiftUI.swift */,
+				8B755C132BFBF6B600B2ACCA /* ViewControllerHolder.swift */,
+				8B755C152BFBF6E200B2ACCA /* ViewControllerKey.swift */,
 			);
 			path = navigation;
 			sourceTree = "<group>";
@@ -204,6 +219,7 @@
 				8B3791BB2BFA557F00536706 /* TestContentView.swift */,
 				8B514D662BFA97EE00CBDF78 /* ProductView.swift */,
 				8B755BCD2BFB7B5600B2ACCA /* ProductDetailView.swift */,
+				8B755C172BFBF71700B2ACCA /* UIVIewAA.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -230,6 +246,7 @@
 			children = (
 				8B9FEBA62BEC00080081DCD5 /* View.swift */,
 				8B3791C42BFA579100536706 /* EnvironmentValues.swift */,
+				8B755C0F2BFBF60F00B2ACCA /* UIViewController_.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -346,25 +363,25 @@
 				8B2F0F6A2BED617500867A08 /* HintModel.swift in Sources */,
 				8B8E728E2BF291CB00669451 /* CurveRectangle.swift in Sources */,
 				8B2F0F682BED5B9400867A08 /* AFont.swift in Sources */,
-				8B755BEF2BFBE74400B2ACCA /* UIKit_To_SwiftUI.swift in Sources */,
 				8B9FEBA72BEC00080081DCD5 /* View.swift in Sources */,
 				8B514D652BFA8A6E00CBDF78 /* ProductViewModel.swift in Sources */,
 				8B30B5782BEBF75500B20EE7 /* AvocadoKZApp.swift in Sources */,
-				8B755BE22BFBDC1800B2ACCA /* ViewControllerHolder.swift in Sources */,
+				8B755C182BFBF71700B2ACCA /* UIVIewAA.swift in Sources */,
 				8B3791C52BFA579100536706 /* EnvironmentValues.swift in Sources */,
 				8B9FEBAE2BEC05F70081DCD5 /* AText.swift in Sources */,
 				8B9FEBA92BEC00360081DCD5 /* RoundedCorner.swift in Sources */,
+				8B755C122BFBF64A00B2ACCA /* UIKit_To_SwiftUI.swift in Sources */,
 				8B514D672BFA97EE00CBDF78 /* ProductView.swift in Sources */,
 				8B3791C12BFA56FD00536706 /* TemporaryImageCache.swift in Sources */,
-				8B755BE62BFBDC9900B2ACCA /* UIViewController.swift in Sources */,
 				8B5EF4D92BF660C1007908AA /* AsyncImage.swift in Sources */,
 				8B59EE632BF22307004607E4 /* MarketView.swift in Sources */,
 				8B59EE612BF221D7004607E4 /* ProductModel.swift in Sources */,
+				8B755C102BFBF60F00B2ACCA /* UIViewController_.swift in Sources */,
+				8B755C162BFBF6E200B2ACCA /* ViewControllerKey.swift in Sources */,
+				8B755C142BFBF6B600B2ACCA /* ViewControllerHolder.swift in Sources */,
 				8B3791BF2BFA56DD00536706 /* ImageCache.swift in Sources */,
-				8B755BE82BFBDEB900B2ACCA /* UIVIewAA.swift in Sources */,
 				8B514D692BFA9A2100CBDF78 /* image.swift in Sources */,
 				8B9FEBAB2BEC04410081DCD5 /* HintViewModel.swift in Sources */,
-				8B755BE42BFBDC4000B2ACCA /* ViewControllerKey.swift in Sources */,
 				8B3791BA2BFA4C4500536706 /* ImageLoader.swift in Sources */,
 				8BA651982BF1153100C23172 /* EventModel.swift in Sources */,
 				8B755BCE2BFB7B5600B2ACCA /* ProductDetailView.swift in Sources */,
