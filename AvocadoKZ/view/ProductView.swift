@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ProductView: View {
     
@@ -19,6 +20,12 @@ struct ProductView: View {
     
     var body: some View {
         productView()
+            .onTapGesture {
+                vm.openDetails.toggle()
+            }
+            .sheet(isPresented: $vm.openDetails, content: {
+                ProductDetailView(product: product)
+            })
     }
     
     private func productView() -> some View {
