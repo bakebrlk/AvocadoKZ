@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SnapKit
+//import SnapKit
 
 class UIVIewAA: UIViewController {
     
@@ -48,10 +48,10 @@ class UIVIewAA: UIViewController {
         
         view.addSubview(text)
         text.translatesAutoresizingMaskIntoConstraints = false
-        text.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(-16)
-//            make.bottom.equalTo(btn.snp.top).offset(-16)
-        }
+//        text.snp.makeConstraints { make in
+//            make.leading.equalToSuperview().offset(16)
+//            make.trailing.equalToSuperview().offset(-16)
+////            make.bottom.equalTo(btn.snp.top).offset(-16)
+//        }
     }
 }
