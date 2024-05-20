@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ProductView: View {
     
@@ -19,8 +20,12 @@ struct ProductView: View {
     
     var body: some View {
         productView()
-            .frame(maxWidth: AppData.shared.size.width/2, maxHeight: AppData.shared.size.height/3)
-       
+            .onTapGesture {
+                vm.openDetails.toggle()
+            }
+            .sheet(isPresented: $vm.openDetails, content: {
+                ProductDetailView(product: product)
+            })
     }
     
     private func productView() -> some View {
@@ -59,30 +64,28 @@ struct ProductView: View {
                     .padding(.bottom, 0)
                 }
                 
-                addBasket
+                addBasketbtn
             }
+        .frame(maxWidth: AppData.shared.size.width/2.1, maxHeight: AppData.shared.size.height/2.3)
             .background(
                 BottomCurveRectangle()
                     .foregroundColor(Color(.systemBackground))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             )
-            .padding(10)
+//            .padding(10)
             
     }
 
-    private var addBasket: some View {
+    private var addBasketbtn: some View {
         Group {
             
-            if vm.addBasket {
+            if vm.haveBasket {
                 
                 HStack{
-                    image(systemName: "trash", size: 18)
+                    image(systemName: "minus", size: 18)
                         .foregroundColor(.white)
                         .onTapGesture {
-                            withAnimation {
-                                vm.count = 0
-                                vm.addBasket.toggle()
-                            }
+                            vm.minus()
                         }
                     
                     AText.shared.justText(text: "\(vm.count)шт")
@@ -92,17 +95,17 @@ struct ProductView: View {
                     image(systemName: "plus", size: 15)
                         .foregroundColor(.white)
                         .onTapGesture {
-                            vm.count += 1
+                            vm.plus()
                         }
                 }
                 .padding([.leading, .trailing])
+
+              
                 
             }else {
                 Button(action: {
-                    withAnimation {
-                        vm.addBasket.toggle()
-                        vm.count = 1
-                    }
+                    vm.addBasket()
+                    
                 }, label: {
                     AText.shared.justText(text: "Добавить +")
                         .frame(maxWidth: .infinity,minHeight: 50)
@@ -115,7 +118,7 @@ struct ProductView: View {
         .background(
             CurveRectangle()
                 .frame(maxWidth: .infinity)
-                .foregroundColor(vm.addBasket ? Color.green : Color(.secondarySystemBackground))
+                .foregroundColor(vm.haveBasket ? Color.green : Color(.secondarySystemBackground))
                 .padding(.top, 5)
         )
         .padding([.leading, .trailing])

@@ -12,4 +12,9 @@ struct ProductModel: Codable {
     let title: String
     let whole: String
     let price: Int
+    let discount: Int?
+    let fromTheFarm: Bool
+    let description: String?
+    let composition: String
+    let country: String
 }
