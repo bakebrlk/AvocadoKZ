@@ -169,10 +169,8 @@ struct MarketView: View {
                 if vm.height >= 10 {
                     vm.height -= 10
                 }
-//                vm.minusHeight()
             } else {
                 vm.height = 80
-//                vm.plusHeight()
             }
             
         }

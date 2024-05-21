@@ -13,7 +13,7 @@ struct ProductView: View {
     
     private let product: ProductModel
     
-    @ObservedObject private var vm = ProductViewModel()
+    @ObservedObject private var vm = ProductViewModel.shared
     
     @Environment(\.viewController) private var viewControllerHolder: UIViewController?
 

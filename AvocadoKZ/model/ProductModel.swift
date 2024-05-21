@@ -20,4 +20,5 @@ struct ProductModel: Hashable, Identifiable
     let composition: String
     let country: String
     let category: String
+    var count: Int
 }
