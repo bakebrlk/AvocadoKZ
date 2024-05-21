@@ -41,6 +41,8 @@
 		8B755C162BFBF6E200B2ACCA /* ViewControllerKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C152BFBF6E200B2ACCA /* ViewControllerKey.swift */; };
 		8B755C182BFBF71700B2ACCA /* UIVIewAA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C172BFBF71700B2ACCA /* UIVIewAA.swift */; };
 		8B755C2A2BFC19A700B2ACCA /* StrikethroughText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C292BFC19A700B2ACCA /* StrikethroughText.swift */; };
+		8B755C2D2BFC32DA00B2ACCA /* ScrollOffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C2C2BFC32DA00B2ACCA /* ScrollOffsetPreferenceKey.swift */; };
+		8B755C2F2BFC360000B2ACCA /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755C2E2BFC360000B2ACCA /* MarketViewModel.swift */; };
 		8B8E728E2BF291CB00669451 /* CurveRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8E728D2BF291CB00669451 /* CurveRectangle.swift */; };
 		8B9FEBA12BEBFB8E0081DCD5 /* HintPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FEBA02BEBFB8E0081DCD5 /* HintPageView.swift */; };
 		8B9FEBA42BEBFBFC0081DCD5 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FEBA32BEBFBFC0081DCD5 /* AppData.swift */; };
@@ -49,6 +51,7 @@
 		8B9FEBAB2BEC04410081DCD5 /* HintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FEBAA2BEC04410081DCD5 /* HintViewModel.swift */; };
 		8B9FEBAE2BEC05F70081DCD5 /* AText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FEBAD2BEC05F70081DCD5 /* AText.swift */; };
 		8BA651982BF1153100C23172 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA651972BF1153100C23172 /* EventModel.swift */; };
+		8BD517E92BFC88DF001C6705 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD517E82BFC88DF001C6705 /* SectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +91,8 @@
 		8B755C152BFBF6E200B2ACCA /* ViewControllerKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerKey.swift; sourceTree = "<group>"; };
 		8B755C172BFBF71700B2ACCA /* UIVIewAA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewAA.swift; sourceTree = "<group>"; };
 		8B755C292BFC19A700B2ACCA /* StrikethroughText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikethroughText.swift; sourceTree = "<group>"; };
+		8B755C2C2BFC32DA00B2ACCA /* ScrollOffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetPreferenceKey.swift; sourceTree = "<group>"; };
+		8B755C2E2BFC360000B2ACCA /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
 		8B8E728D2BF291CB00669451 /* CurveRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveRectangle.swift; sourceTree = "<group>"; };
 		8B9FEBA02BEBFB8E0081DCD5 /* HintPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPageView.swift; sourceTree = "<group>"; };
 		8B9FEBA32BEBFBFC0081DCD5 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 		8B9FEBAA2BEC04410081DCD5 /* HintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewModel.swift; sourceTree = "<group>"; };
 		8B9FEBAD2BEC05F70081DCD5 /* AText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AText.swift; sourceTree = "<group>"; };
 		8BA651972BF1153100C23172 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		8BD517E82BFC88DF001C6705 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,14 @@
 			path = navigation;
 			sourceTree = "<group>";
 		};
+		8B755C2B2BFC32BE00B2ACCA /* Scroll View */ = {
+			isa = PBXGroup;
+			children = (
+				8B755C2C2BFC32DA00B2ACCA /* ScrollOffsetPreferenceKey.swift */,
+			);
+			path = "Scroll View";
+			sourceTree = "<group>";
+		};
 		8B9FEB9C2BEBFA980081DCD5 /* main */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,11 +214,13 @@
 		8B9FEB9D2BEBFACB0081DCD5 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				8B755C2B2BFC32BE00B2ACCA /* Scroll View */,
 				8B9FEBAC2BEC05DC0081DCD5 /* Custom */,
 				8B9FEBA82BEC00360081DCD5 /* RoundedCorner.swift */,
 				8B2F0F692BED617500867A08 /* HintModel.swift */,
 				8BA651972BF1153100C23172 /* EventModel.swift */,
 				8B59EE602BF221D7004607E4 /* ProductModel.swift */,
+				8BD517E82BFC88DF001C6705 /* SectionModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -227,6 +243,7 @@
 			children = (
 				8B9FEBAA2BEC04410081DCD5 /* HintViewModel.swift */,
 				8B514D642BFA8A6E00CBDF78 /* ProductViewModel.swift */,
+				8B755C2E2BFC360000B2ACCA /* MarketViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -370,15 +387,18 @@
 				8B755C122BFBF64A00B2ACCA /* UIKit_To_SwiftUI.swift in Sources */,
 				8B514D672BFA97EE00CBDF78 /* ProductView.swift in Sources */,
 				8B3791C12BFA56FD00536706 /* TemporaryImageCache.swift in Sources */,
+				8BD517E92BFC88DF001C6705 /* SectionModel.swift in Sources */,
 				8B5EF4D92BF660C1007908AA /* AsyncImage.swift in Sources */,
 				8B59EE632BF22307004607E4 /* MarketView.swift in Sources */,
 				8B59EE612BF221D7004607E4 /* ProductModel.swift in Sources */,
 				8B755C102BFBF60F00B2ACCA /* UIViewController_.swift in Sources */,
 				8B755C162BFBF6E200B2ACCA /* ViewControllerKey.swift in Sources */,
+				8B755C2F2BFC360000B2ACCA /* MarketViewModel.swift in Sources */,
 				8B755C142BFBF6B600B2ACCA /* ViewControllerHolder.swift in Sources */,
 				8B3791BF2BFA56DD00536706 /* ImageCache.swift in Sources */,
 				8B514D692BFA9A2100CBDF78 /* image.swift in Sources */,
 				8B9FEBAB2BEC04410081DCD5 /* HintViewModel.swift in Sources */,
+				8B755C2D2BFC32DA00B2ACCA /* ScrollOffsetPreferenceKey.swift in Sources */,
 				8B3791BA2BFA4C4500536706 /* ImageLoader.swift in Sources */,
 				8BA651982BF1153100C23172 /* EventModel.swift in Sources */,
 				8B755C2A2BFC19A700B2ACCA /* StrikethroughText.swift in Sources */,

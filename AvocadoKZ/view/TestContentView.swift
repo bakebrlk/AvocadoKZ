@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TestContentView: View {
+    
     var body: some View {
  
             HStack{
@@ -21,7 +22,7 @@ struct TestContentView: View {
                                         fromTheFarm: true,
                                         description: "это наши пельмени с говядиной. Попробуйте наши говяжьи пельмени - вкусный выбор для семейного обеда или ужина. Изготовлены из натуральных ингредиентов с использованием фермерской говядины.", 
                                         composition: "(тесто) мука пшеничная в/с, вода питьевая, яйцо, масло растительное, соль поваренная пищевая, (начинка фарш) говядина, лук репчатый, соль поваренная пищевая, черный перец.", 
-                                        country: "Казахстан"
+                                        country: "Казахстан", category: ""
                                     )
                                         
                 )
@@ -30,8 +31,11 @@ struct TestContentView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(.secondarySystemBackground))
             .ignoresSafeArea(.all)
+            
 
     }
+    
+
 }
 
 #Preview {
