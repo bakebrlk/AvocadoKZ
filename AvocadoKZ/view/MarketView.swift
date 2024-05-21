@@ -9,26 +9,69 @@ import SwiftUI
 
 struct MarketView: View {
     
-    @ObservedObject private var vm = MarketViewModel()
+    @StateObject private var vm = MarketViewModel()
     
     var body: some View {
           NavigationView {
-              VStack {
+              VStack(alignment: .leading) {
                   topBar
                   
                   searchBar
                   
-                  scrollView(content: products)
-                      .background(Color(.systemBackground))
+                  scrollView(content: productContent)
+                      .background(Color(.systemGroupedBackground))
               }
+              .frame(maxWidth: .infinity, maxHeight: .infinity)
+              .background(Color(.systemBackground))
           }
+         
       }
     
+//MARK: Product Content
+    private var productContent: some View {
+        VStack{
+            ForEach(AppData.shared.sections) { section in
+                
+                ForEach(AppData.shared.product) { product in
+                    
+                    VStack(alignment: .leading){
+                        sections(title: section.description, content: Text(""))
+                        
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack{
+                                ProductView(product)
+                                    .frame(maxWidth: AppData.shared.size.width / 2.2)
+                                    .padding(.leading)
+                                
+                                ProductView(product)
+                                    .frame(maxWidth: AppData.shared.size.width / 2.2)
+                                    .padding(.leading)
+                                
+                                ProductView(product)
+                                    .frame(maxWidth: AppData.shared.size.width / 2.2)
+                                    .padding(.leading)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .frame(maxWidth: .infinity)
+    }
+    
+//MARK: Sections
+    private func sections(title: String, content: some View) -> some View {
+        VStack(alignment: .leading){
+            AText.shared.text(text: title, size: 20, font: .extraBold)
+            
+            content
+        }
+    }
     
 //MARK: Search Bar
     private var searchBar: some View {
         HStack {
-            TextField("Search...", text: vm.$searchQuery)
+            TextField("Search...", text: $vm.searchQuery )
                 .padding(7)
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))
@@ -58,15 +101,13 @@ struct MarketView: View {
     
 //MARK: Products
     private var products: some View {
-        VStack{
-            ForEach(0..<10, id: \.self) { id in
-                HStack{
-                                   
-                    ProductView(AppData.shared.product[0])
-                    ProductView(AppData.shared.product[0])
-                }
-                .padding(.bottom)
+        HStack{
+            ForEach(AppData.shared.product) { product in
+                
+                ProductView(AppData.shared.product[0])
+                    .padding(.bottom)
             }
+            
         }
     }
     
@@ -110,7 +151,7 @@ struct MarketView: View {
     
 //MARK: Scroll View
     private func scrollView(content: some View) -> some View {
-        ScrollView {
+        ScrollView{
             GeometryReader { geometry in
                 Color.clear
                     .preference(key: ScrollViewOffsetPreferenceKey.self, value: geometry.frame(in: .named("scrollView")).minY)
@@ -122,12 +163,14 @@ struct MarketView: View {
         .background(Color(.secondarySystemBackground))
         .coordinateSpace(name: "scrollView")
         .onPreferenceChange(ScrollViewOffsetPreferenceKey.self) { value in
-            self.vm.scrollOffset = -value
-
+            
+            print(value)
             if value < -50 {
-                self.vm.height -= 10
+                vm.height -= 10
+//                vm.minusHeight()
             } else {
-                self.vm.height = 80
+                vm.height = 80
+//                vm.plusHeight()
             }
             
         }

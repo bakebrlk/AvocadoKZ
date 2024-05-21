@@ -55,9 +55,9 @@ final class AppData: ObservableObject {
         
     ]
     
-    public let sections: [ String: String] = [
-        "news" : "Новинки для Вас",
-        "farm" : "Фермерская лавка",
-        "care" : "С заботой о себе"
+    public let sections: [ SectionModel] = [
+        SectionModel(category: "news", description: "Новинки для Вас"),
+        SectionModel(category: "farm", description: "Фермерская лавка"),
+        SectionModel(category:  "care", description: "С заботой о себе")
     ]
 }

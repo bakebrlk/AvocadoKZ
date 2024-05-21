@@ -14,6 +14,7 @@ struct ProductView: View {
     private let product: ProductModel
     
     @ObservedObject private var vm = ProductViewModel()
+    
     @Environment(\.viewController) private var viewControllerHolder: UIViewController?
 
     init(_ product: ProductModel){

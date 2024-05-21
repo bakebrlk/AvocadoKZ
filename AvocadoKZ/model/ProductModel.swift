@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct ProductModel: Codable {
+struct ProductModel: Hashable, Identifiable
+{
+    var id = UUID()
     let imgURL: String
     let title: String
     let whole: Int
