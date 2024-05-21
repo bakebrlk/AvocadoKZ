@@ -11,7 +11,7 @@ final class ProductViewModel: ObservableObject{
     
     @Published public var isLike: Bool = false
     @Published public var haveBasket: Bool = false
-    @Published public var count: Int = 0
+    @Published public var count: Int = 1
     @Published public var openDetails: Bool = false
     
     public func plus() {
@@ -31,9 +31,11 @@ final class ProductViewModel: ObservableObject{
     }
     
     public func addBasket() {
-        withAnimation{
-            haveBasket.toggle()
-            count = 1
+        if !haveBasket{
+            withAnimation{
+                haveBasket.toggle()
+                count = 1
+            }
         }
     }
     

@@ -25,7 +25,7 @@ struct ProductView: View {
             .onTapGesture {
                 vm.openDetails.toggle()
                 self.viewControllerHolder?.present(style: .pageSheet){
-                    ProductDetailView(product: product)
+                    ProductDetailView(product: product, vm: _vm)
                 }
             }
     }
@@ -38,7 +38,7 @@ struct ProductView: View {
                 AsyncImage(url: product.imgURL, placeholder: {
                     Text("Loading...")
                 })
-                .cornerRadius(8, corners: [.topLeft, .topRight])
+                .cornerRadius(8, corners: [.topLeft, .topRight, .bottomLeft])
                 
                 Image(systemName: vm.isLike ? "heart.fill" : "heart")
                     .resizable()
@@ -51,14 +51,38 @@ struct ProductView: View {
                             vm.isLike.toggle()
                         }
                     }
-            
+                HStack{
+                   
+                    VStack(alignment: .leading){
+                        
+                        Spacer()
+                        if product.fromTheFarm {
+                            AText.shared.text(text: "С фермы", size: 14, font: .regular)
+                                .foregroundColor(.white)
+                                .background(Color.orange)
+                                .cornerRadius(8, corners: product.discount == nil ? [.topRight, .bottomRight, .bottomLeft] : [.topRight, .bottomRight])
+                        }
+                        
+                        if let discount = product.discount {
+                            AText.shared.text(text: "\(discount)%", size: 14, font: .regular)
+                                .foregroundColor(.white)
+                                .background(Color(.darkGray))
+                                .cornerRadius(8, corners: [.topRight, .bottomRight, .bottomLeft])
+                                
+                        }
+                        
+                    }
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity)
+                .padding(1)
             }
                         
             LazyVStack{
                 
                    
                 AText.shared.text(text: product.title, size: 14, font: .regular, lineLimit: 2)
-                AText.shared.text(text: product.whole, size: 14, font: .light)
+                AText.shared.text(text: "\(product.whole) г", size: 14, font: .light)
                     .padding(.top, 1)
 
                 AText.shared.text(text: "\(product.price) ₸", size: 22, font: .medium)

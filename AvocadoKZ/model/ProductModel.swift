@@ -10,7 +10,7 @@ import SwiftUI
 struct ProductModel: Codable {
     let imgURL: String
     let title: String
-    let whole: String
+    let whole: Int
     let price: Int
     let discount: Int?
     let fromTheFarm: Bool
