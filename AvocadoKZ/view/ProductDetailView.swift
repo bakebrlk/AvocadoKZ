@@ -153,7 +153,7 @@ struct ProductDetailView: View {
                     if vm.haveBasket {
                         vm.plus()
                     }else{
-                        vm.addBasket()
+                        vm.addBasket(product)
                     }
                 }
         }
@@ -161,7 +161,7 @@ struct ProductDetailView: View {
         .background(Color.green)
         .offset(y: AppData.shared.size.width * 0.1)
         .onTapGesture {
-            vm.addBasket()
+            vm.addBasket(product)
         }
     }
     

@@ -57,6 +57,7 @@
 		8BEFC97F2BFD096800841BE0 /* BasketProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFC97E2BFD096800841BE0 /* BasketProductCell.swift */; };
 		8BEFC9812BFD15C700841BE0 /* BasketProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFC9802BFD15C700841BE0 /* BasketProductCollectionViewCell.swift */; };
 		8BEFC9832BFD1C3600841BE0 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFC9822BFD1C3600841BE0 /* CustomFlowLayout.swift */; };
+		8BEFC9852BFD212200841BE0 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFC9842BFD212200841BE0 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		8BEFC97E2BFD096800841BE0 /* BasketProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductCell.swift; sourceTree = "<group>"; };
 		8BEFC9802BFD15C700841BE0 /* BasketProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BEFC9822BFD1C3600841BE0 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		8BEFC9842BFD212200841BE0 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 				8B755BCD2BFB7B5600B2ACCA /* ProductDetailView.swift */,
 				8B755C172BFBF71700B2ACCA /* UIVIewAA.swift */,
 				8BEFC97A2BFCFFBD00841BE0 /* BasketView.swift */,
+				8BEFC9842BFD212200841BE0 /* TabBar.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				8BA651982BF1153100C23172 /* EventModel.swift in Sources */,
 				8B755C2A2BFC19A700B2ACCA /* StrikethroughText.swift in Sources */,
 				8B755BCE2BFB7B5600B2ACCA /* ProductDetailView.swift in Sources */,
+				8BEFC9852BFD212200841BE0 /* TabBar.swift in Sources */,
 				8B9FEBA12BEBFB8E0081DCD5 /* HintPageView.swift in Sources */,
 				8BEFC97F2BFD096800841BE0 /* BasketProductCell.swift in Sources */,
 				8B3791C32BFA577800536706 /* ImageCacheKey.swift in Sources */,

@@ -131,8 +131,7 @@ struct ProductView: View {
                 
             }else {
                 Button(action: {
-                    vm.addBasket()
-                    
+                    vm.addBasket(product)
                 }, label: {
                     AText.shared.justText(text: "Добавить +")
                         .frame(maxWidth: .infinity,minHeight: 50)
