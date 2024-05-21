@@ -11,7 +11,7 @@ import SwiftUI
 struct AvocadoKZApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           HintPageView()
         }
     }
 }
