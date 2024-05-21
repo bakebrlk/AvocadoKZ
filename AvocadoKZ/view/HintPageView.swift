@@ -10,7 +10,9 @@ import SwiftUI
 struct HintPageView: View {
         
     @ObservedObject private var vm: HintViewModel = HintViewModel()
-    
+    @State private var nextPage: Bool = false
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
+
     var body: some View {
         ZStack{
             AppData.shared.appColor
@@ -28,6 +30,7 @@ struct HintPageView: View {
             }
             .ignoresSafeArea()
         }
+        
     }
     
 //MARK: information
@@ -109,7 +112,13 @@ struct HintPageView: View {
     private var nextPageBtn: some View {
         Button(action: {
             withAnimation{
-                vm.nextPage()
+                if vm.page < 3 {
+                    vm.nextPage()
+                }else {
+                    self.viewControllerHolder?.present(style: .fullScreen){
+                        TabBar()
+                    }
+                }
             }
         },
                label: {

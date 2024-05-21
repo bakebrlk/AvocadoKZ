@@ -32,12 +32,13 @@ final class ProductViewModel: ObservableObject{
         }
     }
     
-    public func addBasket() {
+    public func addBasket(_ product: ProductModel) {
         if !haveBasket{
             withAnimation{
                 haveBasket.toggle()
                 count = 1
             }
+            AppData.shared.basket.append(product)
         }
     }
     
