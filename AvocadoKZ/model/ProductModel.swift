@@ -17,4 +17,5 @@ struct ProductModel: Codable {
     let description: String?
     let composition: String
     let country: String
+    let category: String
 }
